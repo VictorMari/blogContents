@@ -1,0 +1,15 @@
+services:
+  crawler:
+    build: .
+    volumes: 
+        - extractedData:/extracted/blogs
+  db:
+    image: mongo
+    ports: 
+      - "8200:27017"
+    volumes: 
+      - blogVolume:/data/db
+
+volumes:
+  blogVolume: {}
+  extractedData: {}

@@ -1,0 +1,17 @@
+Sending build context to Docker daemon  7.168kB
+Step 1/5 : FROM python:3.3-rc-slim
+ ---> 4c7e99fa9b70
+Step 2/5 : COPY requirements.txt .
+ ---> Using cache
+ ---> a05b0c4e974c
+Step 3/5 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> 98aca0dc9307
+Step 4/5 : COPY . .
+ ---> 56d12e86d69a
+Step 5/5 : CMD ["python", "crawler.py"]
+ ---> Running in c9a917152705
+Removing intermediate container c9a917152705
+ ---> 0b5d4f1adf57
+Successfully built 0b5d4f1adf57
+Successfully tagged labosis/blogcrawler:latest

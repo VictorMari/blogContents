@@ -1,0 +1,1 @@
+docker build -t labosis/blogcrawler . > logs/buildlog.log
